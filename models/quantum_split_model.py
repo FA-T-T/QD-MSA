@@ -276,7 +276,7 @@ class QNNSplited(nn.Module):
         
         if self.with_shortcut:
             outputs = torch.cat((shortcut_x, combined_outputs), dim=1)
-            output_tensor = self.mlpwithshortcut(outputs)            
+            output_tensor = self.mlp_withshortcut(outputs)            
         else:
             combined_outputs = self.drop_out(combined_outputs)
             output_tensor = self.mlp_output(combined_outputs)
