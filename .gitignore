@@ -78,12 +78,14 @@ checkpoints/
 *.pt
 *.ckpt
 
-# Data
-data/
+# Data files (but not the data/ Python module)
 datasets/
 *.csv
 *.json
 !config/*.json
+# Ignore data downloads but keep Python files
+data/ISIC*
+data/*.zip
 
 # Logs
 logs/
